@@ -1,0 +1,47 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "Png2Ico"
+bundle = "imlpc.com"
+version = "0.0.2"
+url = "https://imlpc.com/png2ico"
+license = "BSD license"
+author = 'Pingcheng Luo'
+author_email = "huitailang_luo@126.com"
+
+[tool.briefcase.app.png2ico]
+formal_name = "Png2Ico"
+description = "Png to Ico"
+icon = "src/png2ico/resources/png2ico"
+sources = ['src/png2ico']
+requires = [
+    'pillow>=7.0.0',
+]
+
+
+[tool.briefcase.app.png2ico.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.png2ico.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.png2ico.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.png2ico.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.png2ico.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
